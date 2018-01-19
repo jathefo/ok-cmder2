@@ -11,3 +11,5 @@
 :: you can add your plugins to the cmder path like so
 :: set "PATH=%CMDER_ROOT%\vendor\whatever;%PATH%"
 
+set "PATH=%CMDER_ROOT%\bin\android;%PATH%"
+set "PATH=%CMDER_ROOT%\bin\busybox;%PATH%"
