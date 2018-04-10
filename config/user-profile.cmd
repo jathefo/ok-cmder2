@@ -13,4 +13,6 @@
 
 set "PATH=%CMDER_ROOT%\bin\android;%PATH%"
 set "PATH=%CMDER_ROOT%\bin\busybox;%PATH%"
+set "PATH=%CMDER_ROOT%\bin\raven;%PATH%"
+set "PATH=%CMDER_ROOT%\bin\mytools;%PATH%"
 set "PATH=%CMDER_ROOT%\vendor\git-for-windows\bin;%PATH%"
