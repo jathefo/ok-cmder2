@@ -1,5 +1,5 @@
 @echo off 
 
-call bb-find.bat . -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.java" > cscope.files
-cscope -bkq -i cscope.files
-ctags -R 
+%~dp0busybox\busybox.exe find . -name "*.h" -o -name "*.c" -o -name "*.cpp" -o -name "*.java" > cscope.files
+cscope.exe -bkq -i cscope.files
+ctags.exe -R
