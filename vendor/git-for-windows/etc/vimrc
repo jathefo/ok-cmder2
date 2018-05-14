@@ -91,14 +91,14 @@ set   tags=tags;
 " ******************** taglist configuration end ********************
 
 " ******************* cscope configuration begin ********************
-" " set cscopequickfix=s-,c-,d-,i-,t-,e-if has("cscope")  
+" set cscopequickfix=s-,c-,d-,i-,t-,e-if has("cscope")  
 if has("cscope")    
-" "    set csprg=/usr/bin/cscope  
-" "    set csto=0  
-" "    set cst  
-" "    set csverb  
-" "    set cspc=3  
-"     "add any database in current dir  
+"    set csprg=/usr/bin/cscope  
+"    set csto=0  
+"    set cst  
+"    set csverb  
+"    set cspc=3  
+    "add any database in current dir  
     if filereadable("cscope.out")  
         cs add cscope.out  
     "else search cscope.out elsewhere  
@@ -135,12 +135,25 @@ function! CurDir()
 endfunction
 set statusline=%1*\|\ %f%m%r%h\ \|
 set statusline+=%2*\ \pwd:\ %{CurDir()}\ \|
-set statusline+=%3*\ %=\|\ %l,%c\ %p%%\|
-hi User1 cterm=bold ctermfg=Black ctermbg=green
-hi User2 cterm=bold ctermfg=Black ctermbg=green
-hi User3 cterm=bold ctermfg=Black ctermbg=green
+set statusline+=%3*\ %=\|
+set statusline+=%4*\ %l,%c\ %p%%\|
+hi User1 cterm=inverse,bold ctermfg=Brown ctermbg=Black
+hi User2 cterm=bold ctermfg=Black ctermbg=Brown
+hi User3 cterm=bold ctermfg=Black ctermbg=Cyan
+hi User4 cterm=bold ctermfg=Black ctermbg=Magenta
 
 " ***************** show status line end ******************
+
+" ***************** remember last pos begin ****************
+" remember last update or view postion
+ " Only do this part when compiled with support for autocommands 
+ if has("autocmd")
+ " In text files, always limit the width of text to 78 characters 
+ autocmd BufRead *.txt set tw=78
+ " When editing a file, always jump to the last cursor position 
+ autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal g'\"" | endif 
+ endif
+" ***************** remember last pos end ****************
 
 " ******************* vi system config begin ************************
 set nocompatible
