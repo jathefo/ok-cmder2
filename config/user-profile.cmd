@@ -11,6 +11,13 @@
 :: you can add your plugins to the cmder path like so
 :: set "PATH=%CMDER_ROOT%\vendor\whatever;%PATH%"
 
+set WORKSPACE=%~d0\workspace
+
+if not exist %WORKSPACE% (
+    md %WORKSPACE%
+)
+
+set "PATH=%WORKSPACE%;%PATH%"
 set "PATH=%CMDER_ROOT%\bin\android;%PATH%"
 set "PATH=%CMDER_ROOT%\bin\busybox;%PATH%"
 set "PATH=%CMDER_ROOT%\bin\raven;%PATH%"
