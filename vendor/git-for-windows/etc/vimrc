@@ -91,7 +91,7 @@ set   tags=tags;
 " ******************** taglist configuration end ********************
 
 " ******************* cscope configuration begin ********************
-" set cscopequickfix=s-,c-,d-,i-,t-,e-if has("cscope")  
+" set cscopequickfix=s-,c-,d-,i-,t-,e-,a-
 if has("cscope")    
 "    set csprg=/usr/bin/cscope  
 "    set csto=0  
