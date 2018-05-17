@@ -1,5 +1,8 @@
 @echo off
 
+if "%*" == "help" call :myHelp & exit /b
+if "%*" == "" call :myHelp & exit /b        
+
 if "%1" == "-" (
     cd /d %OLDPATH%
     if not errorlevel 1 set OLDPATH="%cd%"
@@ -16,3 +19,11 @@ if "%1" == "-" (
     cd "%*"
 )
 exit /b
+
+:myHelp
+echo options:
+echo    - last directory
+echo    ~ home directory
+echo    ! ok-cmder directory
+echo    @ workspace directory
+GOTO:EOF
