@@ -31,7 +31,7 @@ Plugin 'VundleVim/Vundle.vim'
 "  " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'jathefo/taglist.vim'
-Plugin 'jathefo/cscope.vim'
+" Plugin 'jathefo/cscope.vim'
 
 call vundle#end()            " required
 " ++++++++++ add your plugins as above ++++++++++
