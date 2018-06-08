@@ -23,7 +23,7 @@ Cmder是windows环境下非常好用的一款终端工具。
 
 		2.1 打开 vim
     	2.2 运行命令  
-			:PluginInstall          
+			:PluginInstall  
 插件安装完成后，重新打开 vim，就能正常使用了。  
 3. ok-cmder 为 vim 加入了 ctags 和 cscope 工具，使得用 vim 阅读源码更方便，在使用 vim 阅读源码之前，在源码目录下运行如下命令：  
 
