@@ -185,6 +185,11 @@ if exist "%CMDER_ROOT%\config\user-profile.cmd" (
     ) > "%CMDER_ROOT%\config\user-profile.cmd"
 )
 
+if exist "%CMDER_ROOT%\config\user-config.bat" (
+    REM user config for Cmder automatically
+    call "%CMDER_ROOT%\config\user-config.bat"
+)
+
 exit /b
 
 ::
