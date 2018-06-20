@@ -4,12 +4,11 @@ Cmder是windows环境下非常好用的一款终端工具。
 ### 使用方法
 1. 直接打开 ok-cmder 目录下的 cmder.exe 可运行cmder终端程序  
 2. 将 ok-cmder 所在的目录加入到系统环境变量中，可在系统路径中启动cmder  
-3. 双击 Install.bat 或 在 Cmder 命令行中运行 .\Install.bat 命令来安装 cygwin  
   
 ### 命令集成
 1. 集成了 adb 和 fastboot 命令  
-2. 集成了 busybox，补充一些命令在 Cmder 中不能用和不好用的情况 busybox 命令使用方法是在命令前加前缀 bb-，例如 bb-grep  
-3. 修改之后的 cd 命令基本能完成 linux 下 cd 命令的相同功能，可在终端中直接运行 cd 或 cd -h 命令查看帮助  
+2. 集成了 busybox，补充一些命令在 Cmder 中不能用和不好用的情况busybox 命令使用方法是在命令前加前缀 bb-，例如 bb-grep  
+3. 修改之后的 cd 命令基本能完成 linux 下 cd 命令的相同功能，可在终端中直接运行 cd 命令查看帮助  
 4. git命令的优化:  
 
         st = status  
@@ -43,7 +42,6 @@ Cmder是windows环境下非常好用的一款终端工具。
 > 以此类推
   
     关于 ctags 和 cscope 的相关命令，可自行搜索，这类资料很多。  
-5. cygwin 集成了常用命令，同时在 cygwin 中我也添加了 gcc、make 等命令，方便在 windows 环境下命令行编译代码。  
   
 ### 最后
 1. 以上都是个人在工作中的一些总结，并不完善和全面，所以欢迎指正，欢迎提出建议。  
