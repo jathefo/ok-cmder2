@@ -17,6 +17,7 @@ if "%1" == "-" (
     if not errorlevel 1 set OLDPATH="%cd%"
 ) else (
     cd "%*"
+    if not errorlevel 1 set OLDPATH="%cd%"
 )
 exit /b
 
