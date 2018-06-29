@@ -32,6 +32,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'jathefo/taglist.vim'
 " Plugin 'jathefo/cscope.vim'
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 " ++++++++++ add your plugins as above ++++++++++
@@ -137,10 +138,10 @@ function! CurDir()
     let curdir = substitute(getcwd(), $HOME, "~", "g")
     return curdir
 endfunction
-set statusline=%1*\|\ %f%m%r%h\ \|
-set statusline+=%2*\ \pwd:\ %{CurDir()}\ \|
+set statusline=%1*\|\ %t%m%r%h\ \|
+set statusline+=%2*\ \pwd:%1.80{CurDir()}\ \|
 set statusline+=%3*\ %=\|
-set statusline+=%4*\ %l,%c\ %p%%\|
+set statusline+=%4*\ %l,%c\ %p%%\ %L\|
 hi User1 cterm=inverse,bold ctermfg=Brown ctermbg=Black
 hi User2 cterm=bold ctermfg=Black ctermbg=Brown
 hi User3 cterm=bold ctermfg=Black ctermbg=Cyan
